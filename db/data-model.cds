@@ -16,7 +16,7 @@ entity Authors {
 
 entity Orders : managed {
     key ID  : UUID;
-    books   : Association to Books;
+    book    : Association to Books;
     country : Country;
     amount  : Integer; 
 }
