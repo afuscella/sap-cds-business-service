@@ -21,5 +21,18 @@
   "dependencies": {
     "@sap/cds": "^3",
     "express": "^4"
+  },
+  "devDependencies": {
+    "sqlite3": "^4.2.0"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db/com.bookstore.db"
+        }
+      }
+    }
   }
 }
