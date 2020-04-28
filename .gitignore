@@ -72,9 +72,6 @@ mergedManifestDescriptor.json
 /build/
 /diagram/
 
-### VS Code ###
-.vscode/
-
 # ECLIPSE JAVA
 **/.settings
 **/target/
