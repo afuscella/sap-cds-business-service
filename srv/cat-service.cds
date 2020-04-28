@@ -1,25 +1,7 @@
-using { Country, managed } from '@sap/cds/common';
+using com.bookstore as bookstore from '../db/data-model';
 
 service CatalogService {
-
-    entity Books {
-        key ID  : Integer;
-        title   : localized String;
-        author  : Association to Authors;
-        stock   : Integer
-    }
-    
-    entity Authors {
-        key ID  : Integer;
-        name    : String;
-        books   : Association to many Books on books.author = $self;
-    }
-
-    entity Orders : managed {
-        key ID  : UUID;
-        books   : Association to Books;
-        country : Country;
-        amount  : Integer; 
-    }
-
+    entity Books   @readonly   as projection on bookstore.Books;
+    entity Authors @readonly   as projection on bookstore.Authors;
+    entity Orders  @insertOnly as projection on bookstore.Orders
 }
