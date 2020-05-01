@@ -3,6 +3,8 @@ Business Service using Node.js
 
 ## Before start
 
+- Download and install the cds plugin for `vscode` and install. download at [vscode-cds-plugin](https://tools.hana.ondemand.com/#cloud-vscodecds)
+
 - Set the `npm` registry for `@sap` packages by executing the statement below at the command line
 
 ```
@@ -24,7 +26,10 @@ npm install @sap/cds
 ```
 
 
-## Create a new project 
+## Getting Started
+
+
+### Create a new project 
 
 Create a new project by typing the statement below at the command line in any directory. It will imply in a creation of a new cds project with their default elements.
 
@@ -32,13 +37,39 @@ Create a new project by typing the statement below at the command line in any di
 cds init ${PROJECT_NAME}
 ```
 
-## Start the cds server-side process 
+### Start the cds server-side process 
 
 ```
 cds watch
 ```
 
-## Getting Started
+
+#### External Persistence Database
+
+Using an external database instead of using the existing in-memory.
+
+- install sqlite3 packages `npm i sqlite3 -D` into your project workspace
+- download and install the sqlite3 on https://www.sqlite.org/download.html
+
+#### Deploy the data model to a SQLite database:
+
+```
+cds deploy --to sqlite:
+```
+
+The newly database is now created under `db/com.bookstore.db`, you may want to open it on sqlite at the command line.
+
+
+#### Open the database in SQLite
+
+Statement below describes the newly database.
+
+```
+sqlite3 .\db\com.bookstore.db -cmd .dump
+```
+
+
+## Useful commands
 
 It contains these folders and files, following our recommended project layout:
 
