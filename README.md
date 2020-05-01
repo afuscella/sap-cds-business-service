@@ -37,6 +37,7 @@ Create a new project by typing the statement below at the command line in any di
 cds init ${PROJECT_NAME}
 ```
 
+
 ### Start the cds server-side process 
 
 ```
@@ -54,7 +55,7 @@ Using an external database instead of using the existing in-memory.
 #### Deploy the data model to a SQLite database:
 
 ```
-cds deploy --to sqlite:
+cds deploy --to sqlite:db\com.bookstore.db
 ```
 
 The newly database is now created under `db/com.bookstore.db`, you may want to open it on sqlite at the command line.
