@@ -1,6 +1,4 @@
-ID;title;author_ID;stock
-201;Wuthering Heights;101;12
-207;Jane Eyre;107;11
-251;The Raven;150;333
-252;Eleonora;150;555
-271;Catweazle;170;22
+ID;title;descr;stock;price;author_ID;currency_code
+201;The Homebrew Handbook;75 Recipes for the Aspiring Backyard Brewer;12;15;101;EUR
+207;So You Want to Start a Brewery?;The Lagunitas Story;35;18;107;EUR
+213;Small Brewery Finance;Accounting Principles and Planning;27;7;113;EUR

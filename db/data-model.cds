@@ -1,5 +1,5 @@
 namespace com.bookstore;
-using { Country, Currency, User, managed } from '@sap/cds/common';
+using { Currency, User, managed } from '@sap/cds/common';
 
 entity Books {
     key ID     : Integer;
@@ -23,19 +23,14 @@ entity Authors {
 
 entity Orders : managed {
     key ID  : UUID;
-    orderNo : String @(
-        title: 'OrderNo',
-        description: 'Order Number'
-    );
-    items   : Composition of many Items on items.parent = $self;
-    country : Country;
-    total   : Decimal(9,2); 
+    OrderNo : String @title: 'OrderNo';
+    Items   : Composition of many Items on Items.parent = $self;
+    Total   : Decimal (9,2);
 }
 
 entity Items : managed {
     key ID  : UUID;
     parent  : Association to Orders;
     book    : Association to Books;
-    country : Country;
     amount  : Integer;
 }
