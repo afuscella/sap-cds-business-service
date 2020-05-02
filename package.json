@@ -20,7 +20,9 @@
   "homepage": "https://github.com/afuscella/sap-cds-business-service#readme",
   "dependencies": {
     "@sap/cds": "^3",
-    "express": "^4"
+    "@sap/hana-client": "^2.4.196",
+    "express": "^4",
+    "hana": "0.0.2"
   },
   "devDependencies": {
     "sqlite3": "^4.2.0"
@@ -28,9 +30,9 @@
   "cds": {
     "requires": {
       "db": {
-        "kind": "sqlite",
+        "kind": "hana",
         "credentials": {
-          "database": "db\\com.bookstore.db"
+          "database": "db/com.bookstore.db"
         }
       }
     }

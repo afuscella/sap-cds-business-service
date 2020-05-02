@@ -1,1 +1,2 @@
 http://localhost:4004/catalog/Authors?$expand=books($select=ID,title)
+http://localhost:4004/catalog/Orders?$expand=Items($expand=book($expand=author))
