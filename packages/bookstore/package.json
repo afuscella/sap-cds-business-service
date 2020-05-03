@@ -1,0 +1,41 @@
+{
+  "name": "sap-cds-business-service-bookstore",
+  "version": "1.0.0",
+  "description": "Bookstore application build in a self-contained all-in-one fashion",
+  "main": "index.js",
+  "scripts": {
+    "start": "cds run",
+	"watch": "cds watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afuscella/sap-cds-business-service.git"
+  },
+  "author": "Arthur Silva",
+  "license": "ISC",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/afuscella/sap-cds-business-service/issues"
+  },
+  "homepage": "https://github.com/afuscella/sap-cds-business-service#readme",
+  "dependencies": {
+    "@sap/cds": "^3",
+    "@sap/hana-client": "^2.4.196",
+    "express": "^4",
+    "hana": "0.0.2"
+  },
+  "devDependencies": {
+    "sqlite3": "^4.2.0"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "hana",
+        "credentials": {
+          "database": "db/com.bookstore.db"
+        }
+      }
+    }
+  }
+}
