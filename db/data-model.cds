@@ -1,7 +1,7 @@
 namespace com.bookstore;
 using { Currency, User, managed } from '@sap/cds/common';
 
-entity Books {
+entity Books : managed, additionalInfo {
     key ID     : Integer;
     title      : localized String;
     descr      : localized String;
@@ -33,4 +33,19 @@ entity Items : managed {
     parent  : Association to Orders;
     book    : Association to Books;
     amount  : Integer;
+}
+
+entity Movies   : additionalInfo {
+    key ID      : Integer;
+    name        : String;
+    releaseDate : Integer;
+}
+
+type Genre : String enum {
+    Mistery; Fiction; Drama; Action; Adventure; Tutorial;
+}
+
+aspect additionalInfo {
+    genre: Genre;
+    language: String(200);
 }
