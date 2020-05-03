@@ -11,8 +11,10 @@ service CatalogService {
         modifiedBy  
     };
 
-    @readonly   entity Authors as projection on bookstore.Authors;
+    @readonly               entity Authors as projection on bookstore.Authors;
     
+    @insert @update @delete entity Movies  as projection on bookstore.Movies;
+
     @requires_: 'authenticated-user'
-    @insertOnly entity Orders  as projection on bookstore.Orders
+    @insertOnly             entity Orders  as projection on bookstore.Orders
 }
