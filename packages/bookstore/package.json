@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cds run",
-	"watch": "cds watch",
+    "watch": "cds watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,7 +31,7 @@
   "cds": {
     "requires": {
       "db": {
-        "kind": "hana",
+        "kind": "sqlite",
         "credentials": {
           "database": "db/com.bookstore.db"
         }

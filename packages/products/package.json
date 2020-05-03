@@ -1,0 +1,21 @@
+{
+  "name": "sap-cds-business-service-products",
+  "version": "1.0.0",
+  "description": "Reusable package providing domain models and services to manage products catalog",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afuscella/sap-cds-business-service.git"
+  },
+  "author": "Arthur Silva",
+  "license": "ISC",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/afuscella/sap-cds-business-service/issues"
+  },
+  "homepage": "https://github.com/afuscella/sap-cds-business-service#readme",
+  "files": [
+    "db",
+    "index.cds"
+  ]
+}
