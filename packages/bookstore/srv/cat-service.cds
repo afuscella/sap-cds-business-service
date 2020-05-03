@@ -1,5 +1,6 @@
 using { com.bookstore as bookstore } from '../db/data-model';
 
+@path: '/browse'
 service CatalogService {
     @readonly entity Books as select from bookstore.Books{
         *,

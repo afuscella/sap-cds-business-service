@@ -1,12 +1,8 @@
 {
-  "name": "sap-cds-business-service",
+  "name": "sap-cds-business-service-products",
   "version": "1.0.0",
-  "description": "Business Service using Node.js",
+  "description": "Reusable package providing domain models and services to manage products catalog",
   "main": "index.js",
-  "scripts": {
-    "start": "npx cds run",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/afuscella/sap-cds-business-service.git"
@@ -18,13 +14,8 @@
     "url": "https://github.com/afuscella/sap-cds-business-service/issues"
   },
   "homepage": "https://github.com/afuscella/sap-cds-business-service#readme",
-  "dependencies": {
-    "@sap/cds": "^3",
-    "@sap/hana-client": "^2.4.196",
-    "express": "^4",
-    "hana": "0.0.2"
-  },
-  "devDependencies": {
-    "sqlite3": "^4.2.0"
-  }
+  "files": [
+    "db",
+    "index.cds"
+  ]
 }

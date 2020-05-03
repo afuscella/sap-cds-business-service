@@ -1,10 +1,11 @@
 {
-  "name": "sap-cds-business-service",
+  "name": "sap-cds-business-service-bookstore",
   "version": "1.0.0",
-  "description": "Business Service using Node.js",
+  "description": "Bookstore application build in a self-contained all-in-one fashion",
   "main": "index.js",
   "scripts": {
-    "start": "npx cds run",
+    "start": "cds run",
+    "watch": "cds watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,5 +27,15 @@
   },
   "devDependencies": {
     "sqlite3": "^4.2.0"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db/com.bookstore.db"
+        }
+      }
+    }
   }
 }
