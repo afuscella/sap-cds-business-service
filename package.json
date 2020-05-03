@@ -26,15 +26,5 @@
   },
   "devDependencies": {
     "sqlite3": "^4.2.0"
-  },
-  "cds": {
-    "requires": {
-      "db": {
-        "kind": "hana",
-        "credentials": {
-          "database": "db/com.bookstore.db"
-        }
-      }
-    }
   }
 }
