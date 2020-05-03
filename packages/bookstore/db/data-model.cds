@@ -1,16 +1,15 @@
 namespace com.bookstore;
 using { cuid, Currency, User, managed } from '@sap/cds/common';
+using { com.products.Products } from '../../products/db/schema'; 
 
-entity Books : managed, additionalInfo {
-    key ID     : Integer;
-    title      : localized String;
-    descr      : localized String;
-    author     : Association to Authors;
-    stock      : Integer;
-    price      : Decimal(9,2);
-    currency   : Currency;
+entity Books : Products, additionalInfo {
+    author : Association to Authors;
 }
-    
+
+entity Magazines : Products {
+    publisher : String;
+}
+
 entity Authors : managed {
     key ID  : Integer;
     name    : String;
